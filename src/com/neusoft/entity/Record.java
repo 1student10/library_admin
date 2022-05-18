@@ -4,6 +4,7 @@ public class Record {
 	private int id; //记录编号
 	private String bookname; //书名编号
 	private String user; //用户名
+
 	public Record() {
 		super();
 	}

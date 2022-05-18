@@ -4,6 +4,7 @@ public class Administrator {
 	private  int  id;//用户编号
 	private String account;  //用户名
 	private String password;  //密码
+
 	public Administrator() {
 		super();
 	}

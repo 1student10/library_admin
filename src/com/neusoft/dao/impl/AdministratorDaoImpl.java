@@ -62,10 +62,6 @@ public class AdministratorDaoImpl implements AdministratorDao {
 		String sql="UPDATE administrator SET account=? ,password=? WHERE id=?";
 		try {
 			conn = BaseDao.getConnection();
-//			pst = conn.prepareStatement(sql);
-//			pst.setString(1, administrator.getAccount());
-//			pst.setString(2, administrator.getPassword());
-//			pst.setString(3, String.valueOf(administrator.getId()));
 			pst=BaseDao.setParam(conn,sql,administrator.getAccount(),administrator.getPassword(),administrator.getId());
 			int result=BaseDao.exeUpdate(pst);
 			if(result>0) {
@@ -84,9 +80,6 @@ public class AdministratorDaoImpl implements AdministratorDao {
 	@Override
 	public List<Administrator> administratorQuery() {
 		String sql="SELECT * from administrator";
-//		Connection conn=null;
-//		PreparedStatement pst=null;
-//		ResultSet rs=null;
 		List<Administrator> list=new ArrayList<Administrator>();
 		try {
 			conn = BaseDao.getConnection();
@@ -103,19 +96,6 @@ public class AdministratorDaoImpl implements AdministratorDao {
 			e.printStackTrace();
 		}finally {
 			BaseDao.close(conn,pst,rs);
-//			try {
-//				if(rs!=null) {
-//					rs.close();
-//				}
-//				if(pst!=null) {
-//					pst.close();
-//				}
-//				if(conn!=null) {
-//					conn.close();
-//				}
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//			}
 		}
 
 		return list;
