@@ -35,7 +35,7 @@ public class UserEntry {
             System.out.println("1.登录\t2.注册用户\t3.退出系统");
             System.out.println("请输入功能的序号:");
             int num = sc.nextInt(); // 获取操作指令
-            if (num > 3) { // 判断输入是否为1到6的数字
+            if (num > 3) { // 判断输入是否为1到3的数字
                 System.out.println("请输入1到3的数字！");
                 flag2 = true;
 

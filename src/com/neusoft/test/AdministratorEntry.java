@@ -11,13 +11,12 @@ import com.neusoft.entity.User;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AdministratorDao {
+public class AdministratorEntry {
     public static void main(String[] args) throws Exception {
         boolean flag1 = false; // 判断用户名和密码是否正确
         boolean flag2 = true; // 判断是否回到主菜单
 
         ArrayList<Administrator> listAdministrator = new ArrayList();// 存放管理员
-//        ArrayList<User> listUser = new ArrayList();// 存放用户
         ArrayList<Book> listBook = new ArrayList();// 存放书
 
         // 实现方法的对象
@@ -36,7 +35,7 @@ public class AdministratorDao {
             System.out.println("1.登录\t2退出系统");
             System.out.println("请输入功能的序号:");
             int num = sc.nextInt(); // 获取操作指令
-            if (num > 2) { // 判断输入是否为1到6的数字
+            if (num > 2) { // 判断输入是否为1到2的数字
                 System.out.println("请输入1到2的数字！");
                 flag2 = true;
 
